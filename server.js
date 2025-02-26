@@ -5,21 +5,21 @@ const hostname='127.0.0.1'
 
 const myserver=http.createServer((req,res)=>{
          
-    if(req.url=='/'|| req.url=='/home.html'){
+    if(req.url=='/'|| req.url=='/home.html'|| req.url=='//home'){
        fs.readFile("index.html",(err,data)=>{
         res.writeHead(200,{'content-type':'text/html'})
         res.write(data)
         res.end()
        })
     }
-    else if(req.url=='/about'){
+    else if(req.url=='/about.html'||req.url=='/about'){
        fs.readFile("about.html",(err,data)=>{
         res.writeHead(200,{'content-type':'text/html'})
         res.write(data)
         res.end()
        })
     }
-    else if(req.url=='/contact.html'){
+    else if(req.url=='/contact.html'||req.url=='/contact'){
        fs.readFile("contact.html",(err,data)=>{
         res.writeHead(200,{'content-type':'text/html'})
         res.write(data)
