@@ -5,7 +5,7 @@ const hostname='127.0.0.1'
 
 const myserver=http.createServer((req,res)=>{
          
-    if(req.url=='/'|| req.url=='/home.html'|| req.url=='//home'){
+    if(req.url=='/'|| req.url=='/index.html'|| req.url=='/home'){
        fs.readFile("index.html",(err,data)=>{
         res.writeHead(200,{'content-type':'text/html'})
         res.write(data)
